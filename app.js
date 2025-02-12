@@ -44,3 +44,16 @@ function actualizarLista() {
         lista.appendChild(li);
     }
 }
+
+// validar si hay amigos en la lista
+function sortearAmigo(){
+    if(amigos.length == 0){
+    alert("por favor agrega amigos para sortear")
+    }else{
+        let indiceSorteo = Math.floor(Math.random()*amigos.length);
+        let sorteo = document.getElementById('resultado');
+        sorteo.innerHTML = amigos[indiceSorteo];
+        console.log(indiceSorteo);
+
+    }
+}
